@@ -43,3 +43,15 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
+
+document.getElementById("learnMoreBtn").addEventListener("click", function () {
+  document.getElementById("moreInfoCard").style.display = "block";
+});
+
+document.getElementById("closeBtn").addEventListener("click", function () {
+  document.getElementById("moreInfoCard").style.display = "none";
+});
+
+document.getElementById("closeCard").addEventListener("click", function () {
+  document.getElementById("moreInfoCard").style.display = "none";
+});
