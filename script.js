@@ -55,3 +55,5 @@ document.getElementById("closeBtn").addEventListener("click", function () {
 document.getElementById("closeCard").addEventListener("click", function () {
   document.getElementById("moreInfoCard").style.display = "none";
 });
+
+
