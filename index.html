@@ -439,83 +439,68 @@
 
 
       <!-- 
-        - #PROJECT
+        - #Partners
       -->
 
+      <div class="partners-section">
+        <h2>Our Trusted Partners</h2>
+    </div>
 
+    <div class="logo-slider">
+        <div class="logos-track">
+            <img src="images/irctc.png" alt="Indian Railways">
+            <img src="images/indigo.png" alt="IndiGo">
+            <img src="images/adani.png" alt="Adani">
+            <img src="images/tata.jpg" alt="Tata Group">
+            <img src="images/reliance.png" alt="Reliance">
+            <img src="images/lnt.png" alt="L&T">
+            <img src="images/air_india.png" alt="Air India">
+        </div>
+    </div>
 
 
       <!-- 
         - #BLOG
       -->
 
-      <section class="section blog" aria-label="blog" id="blog">
+      <section class="blog-section">
         <div class="container">
-          <p class="section-subtitle">Our Blogs</p>
-          <h2 class="h2 section-title">Recent news & events</h2>
-          <p class="section-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry the standard dummy text ever since
-            the when an printer took.
-          </p>
-          <ul class="blog-list grid-list">
-            <li>
-              <div class="blog-card">
-                <figure class="card-banner img-holder" style="--width: 770; --height: 500;">
-                  <img src="images/blog-1.jpg" width="770" height="500" loading="lazy"
-                    alt="At the end of the day, going forward, a new normal that has evolved from. your only logistic partner."
-                    class="img-cover">
-                </figure>
-                <div class="card-content">
-                  <time class="card-meta" datetime="2022-08-02">
-                    <span class="span">02</span> Aug
-                  </time>
-                  <h3 class="h3 card-title">
-                    <a href="#">
-                      At the end of the day, going forward, a new normal that has evolved from. your only logistic
-                      partner.
-                    </a>
-                  </h3>
-                  <p class="card-text">
-                    New chip traps clusters of migrating tumor cells asperiortenetur, blanditiis odit. typesetting
-                    industry the standard dummy text ever since the when an printer.
-                  </p>
-                  <a href="#" class="btn-link">
-                  Read more
-                  </a>
-                </div>
-              </div>
-            </li>
-      
-            <li>
-              <div class="blog-card">
-                <figure class="card-banner img-holder" style="--width: 770; --height: 500;">
-                  <img src="images/blog-2.jpg" width="770" height="500" loading="lazy"
-                    alt="Going forward, a new normal that has evolved from generation. moving your products across all borders."
-                    class="img-cover">
-                </figure>
-                <div class="card-content">
-                  <time class="card-meta" datetime="2022-08-21">
-                    <span class="span">21</span> Aug
-                  </time>
-                  <h3 class="h3 card-title">
-                    <a href="#">
-                      Going forward, a new normal that has evolved from generation. moving your products across all
-                      borders.
-                    </a>
-                  </h3>
-                  <p class="card-text">
-                    New chip traps clusters of migrating tumor cells asperiortenetur, blanditiis odit. typesetting
-                    industry the standard dummy text ever since the when an printer.
-                  </p>
-                  <a href="#" class="btn-link">
-                  Read more
-                  </a>
-                </div>
-              </div>
-            </li>
-          </ul>
+            <h2 class="section-title">Latest News & Insights</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog-1.webp" alt="Global Supply Chain">
+                    </div>
+                    <div class="blog-content">
+                        <h3>Government Announces New Freight Corridors</h3>
+                        <p class="preview-text">The Indian Railways launches new dedicated freight corridors for faster cargo movement..</p>
+                        <button class="read-more" onclick="openBlog(1)">Read More</button>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog-2.jpg" alt="Sustainable Logistics">
+                    </div>
+                    <div class="blog-content">
+                        <h3>India's Ports Witness Record Growth</h3>
+                        <p class="preview-text">Major ports in India handle record cargo volumes in 2024 due to increased exports</p>
+                        <button class="read-more" onclick="openBlog(2)">Read More</button>
+                    </div>
+                </article>
+            </div>
         </div>
-      </section>
+    </section>
+
+    <!-- Modal -->
+    <div id="blogModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+      <!-- Subscribe -->
       
       <section class="section newsletter" aria-label="newsletter">
         <div class="container">
@@ -556,7 +541,7 @@
             
           </div>
           <p class="footer-text">
-            Many desktop publishing packages and web page editors now use are dolra Ipsum as their default.
+            Our Social Media Handles :
           </p>
           <footer>
             <ul class="social-list">
@@ -586,7 +571,7 @@
         </div>
         <ul class="footer-list">
           <li>
-            <p class="footer-list-title">Quick Links</p>
+            <p class="footer-list-title" style="color: black;">Quick Links</p>
           </li>
           <li>
             <a href="#" class="footer-link">About</a>
@@ -597,39 +582,30 @@
           <li>
             <a href="#" class="footer-link">Blog</a>
           </li>
-          <li>
-            <a href="#" class="footer-link">FAQ</a>
-          </li>
-          <li>
-            <a href="#" class="footer-link">Contact Us</a>
-          </li>
         </ul>
         <ul class="footer-list">
           <li>
-            <p class="footer-list-title">Services</p>
+            <p class="footer-list-title" style="color: black;">Services</p>
           </li>
           <li>
-            <a href="#" class="footer-link">Warehouse</a>
+            <p  class="footer-link">Warehouse</p>
           </li>
           <li>
-            <a href="#" class="footer-link">Air Freight</a>
+            <p class="footer-link">Air Freight</p>
           </li>
           <li>
-            <a href="#" class="footer-link">Ocean Freight</a>
+            <p class="footer-link">Ocean Freight</p>
           </li>
           <li>
-            <a href="#" class="footer-link">Road Freight</a>
+            <p class="footer-link">Road Freight</p>
           </li>
           <li>
-            <a href="#" class="footer-link">Packaging</a>
+            <p class="footer-link">Packaging</p>
           </li>
         </ul>
         <ul class="footer-list">
           <li>
             <p class="footer-list-title">Community</p>
-          </li>
-          <li>
-            <a href="#" class="footer-link">Business Consulting</a>
           </li>
           <li>
             <a href="#" class="footer-link">Testimonials</a>
@@ -647,7 +623,7 @@
       </div>
       <div class="footer-bottom">
         <p class="copyright">
-          &copy; 2022 Transportio. All Rights Reserved by <a href="#" class="copyright-link">codewithsadee</a>
+          &copy; 2022 Transportio. All Rights Reserved by <a href="#" class="copyright-link">Transcargo</a>
         </p>
       </div>
     </div>
