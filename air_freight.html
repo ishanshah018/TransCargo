@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Freight Booking</title>
+    <link rel="stylesheet" href="air_freight_css.css">
+</head>
+<body>
+    <div class="booking-container">
+        <h2>Air Freight Booking</h2>
+        <form class="booking-form" id="airFreightForm">
+            <div class="form-group">
+                <label class="form-label">Shipment Type</label>
+                <select class="form-select" required>
+                    <option value="">Select Type</option>
+                    <option value="general">General Cargo</option>
+                    <option value="perishable">Perishable Goods</option>
+                    <option value="dangerous">Dangerous Goods</option>
+                    <option value="valuable">Valuable Cargo</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Origin</label>
+                <input type="text" class="form-input" placeholder="City, Country" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Destination</label>
+                <input type="text" class="form-input" placeholder="City, Country" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Weight (kg)</label>
+                <input type="number" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Dimensions (cm)</label>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+                    <input type="number" class="form-input" placeholder="Length" required>
+                    <input type="number" class="form-input" placeholder="Width" required>
+                    <input type="number" class="form-input" placeholder="Height" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Special Requirements</label>
+                <textarea class="form-textarea" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">Request Quote</button>
+        </form>
+    </div>
+
+    <script src="air_freight_js.js"></script>
+</body>
+</html>
