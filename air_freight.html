@@ -12,7 +12,7 @@
         <form class="booking-form" id="airFreightForm">
             <div class="form-group">
                 <label class="form-label">Shipment Type</label>
-                <select class="form-select" required>
+                <select class="form-select" name="shipmentType" required>
                     <option value="">Select Type</option>
                     <option value="general">General Cargo</option>
                     <option value="perishable">Perishable Goods</option>
@@ -23,35 +23,83 @@
 
             <div class="form-group">
                 <label class="form-label">Origin</label>
-                <input type="text" class="form-input" placeholder="City, Country" required>
+                <input type="text" class="form-input" id="origin" name="origin" placeholder="Start typing city or country" required>
+                <div class="suggestions" id="originSuggestions"></div>
             </div>
 
             <div class="form-group">
                 <label class="form-label">Destination</label>
-                <input type="text" class="form-input" placeholder="City, Country" required>
+                <input type="text" class="form-input" id="destination" name="destination" placeholder="Start typing city or country" required>
+                <div class="suggestions" id="destinationSuggestions"></div>
             </div>
 
             <div class="form-group">
                 <label class="form-label">Weight (kg)</label>
-                <input type="number" class="form-input" required>
+                <input type="number" class="form-input" name="weight" min="0.1" step="0.1" required>
             </div>
 
             <div class="form-group">
                 <label class="form-label">Dimensions (cm)</label>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
-                    <input type="number" class="form-input" placeholder="Length" required>
-                    <input type="number" class="form-input" placeholder="Width" required>
-                    <input type="number" class="form-input" placeholder="Height" required>
+                <div class="dimensions-grid">
+                    <input type="number" class="form-input" name="length" placeholder="Length" min="1" required>
+                    <input type="number" class="form-input" name="width" placeholder="Width" min="1" required>
+                    <input type="number" class="form-input" name="height" placeholder="Height" min="1" required>
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="form-label">Special Requirements</label>
-                <textarea class="form-textarea" rows="4"></textarea>
+                <textarea class="form-textarea" name="requirements" rows="4"></textarea>
             </div>
 
             <button type="submit" class="form-submit">Request Quote</button>
         </form>
+    </div>
+
+    <!-- Summary Modal -->
+    <div id="summaryModal" class="modal">
+        <div class="modal-content">
+            <h3>Booking Summary</h3>
+            <div id="summaryContent"></div>
+            <div class="modal-buttons">
+                <button class="btn-cancel">Cancel</button>
+                <button class="btn-confirm">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Details Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <h3>Contact Information</h3>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" class="form-input" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Phone</label>
+                    <input type="tel" class="form-input" name="phone" required>
+                </div>
+                <div class="modal-buttons">
+                    <button type="button" class="btn-cancel">Cancel</button>
+                    <button type="submit" class="btn-confirm">Continue</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <h3>Thank You!</h3>
+            <p>We have received your booking request. Our team will contact you shortly at the provided contact details.</p>
+            <button class="btn-confirm">OK</button>
+        </div>
     </div>
 
     <script src="air_freight_js.js"></script>
