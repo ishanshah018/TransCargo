@@ -299,8 +299,6 @@ body {
 
 
 
-
-
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -308,121 +306,120 @@ body {
 .header-contact { display: none; }
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding-block: 15px;
-  z-index: 4;
-  transition: var(--transition);
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+padding-block: 15px;
+z-index: 4;
+transition: var(--transition);
 }
 
 .header.active {
-  background-color: rgba(10, 55, 90, 0.3); /* Transparent background */
-  backdrop-filter: saturate(180%) brightness(120%) blur(0px); /* Enhances glass effect */
-  -webkit-backdrop-filter: saturate(180%) brightness(120%) blur(0px); /* For Safari */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for glass edges */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for depth */
-  transition: all 0.3s ease; /* Smooth transition for the effect */
+background-color: rgba(10, 55, 90, 0.3); /* Transparent background */
+backdrop-filter: saturate(180%) brightness(120%) blur(0px); /* Enhances glass effect */
+-webkit-backdrop-filter: saturate(180%) brightness(120%) blur(0px); /* For Safari */
+border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for glass edges */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for depth */
+transition: all 0.3s ease; /* Smooth transition for the effect */
 }
 
 .header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 30px;
 }
-
 
 /* Logo Container */
 .logo-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+display: flex;
+align-items: center;
+gap: 10px;
 }
 
 /* Logo Text */
 .logo-text {
-  font-size: 2.5rem;
-  font-weight: bold;
-  display: flex;
+font-size: 2.5rem;
+font-weight: bold;
+display: flex;
 }
 
 .blue-text {
-  color: #28b8f5; /* Light blue color */
+color: #28b8f5; /* Light blue color */
 }
 
 .white-text {
-  color: white;
+color: white;
 }
 
 /* Logo Icon */
 .logo-icon {
-  position: relative;
-  font-size: 2.5rem;
-  display: flex;
-  align-items: center;
+position: relative;
+font-size: 2.5rem;
+display: flex;
+align-items: center;
 }
 
 .logo-icon ion-icon {
-  color: white;
+color: white;
 }
 
 .location-marker {
-  color: #28b8f5; /* Light blue color */
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  font-size: 1.2rem;
+color: #28b8f5; /* Light blue color */
+position: absolute;
+top: -10px;
+right: -10px;
+font-size: 1.2rem;
 }
 
-#logot2{
-  background-color: black;
-  font-size: 2.5rem;
-  font-weight: bold;
-  display: flex;
+#logot2 {
+background-color: black;
+font-size: 2.5rem;
+font-weight: bold;
+display: flex;
 }
 
 /* Logo end */
 
 .nav-open-btn {
-  color: var(--white);
-  font-size: 35px;
+color: var(--white);
+font-size: 35px;
 }
 
 .nav-open-btn ion-icon { --ionicon-stroke-width: 40px; }
 
 .navbar {
-  position: fixed;
-  top: 0;
-  left: -300px;
-  max-width: 300px;
-  width: 100%;
-  height: 100%;
-  background-color: var(--white);
-  box-shadow: var(--shadow-1);
-  z-index: 3;
-  visibility: hidden;
-  transition: 0.25s var(--cubic-in);
+position: fixed;
+top: 0;
+left: -300px;
+max-width: 300px;
+width: 100%;
+height: 100%;
+background-color: var(--white);
+box-shadow: var(--shadow-1);
+z-index: 3;
+visibility: hidden;
+transition: 0.25s var(--cubic-in);
 }
 
 .navbar.active {
-  visibility: visible;
-  transform: translateX(300px);
-  transition: 0.5s var(--cubic-out);
+visibility: visible;
+transform: translateX(300px);
+transition: 0.5s var(--cubic-out);
 }
 
 .navbar-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-block-end: 1px solid var(--plutinum);
-  padding: 30px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-block-end: 1px solid var(--plutinum);
+padding: 30px 20px;
 }
 
 .navbar-top .logo {
-  color: var(--onyx);
-  font-size: 3rem;
+color: var(--onyx);
+font-size: 3rem;
 }
 
 .nav-close-btn { font-size: 25px; }
@@ -432,144 +429,293 @@ body {
 .navbar-item:not(:last-child) { border-block-end: 1px solid var(--plutinum); }
 
 .navbar-link {
-  font-family:'Times New Roman', Times, serif;
-  font-size: 22px;
-  color: var(--black);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  transition: var(--transition);
+font-family: 'Times New Roman', Times, serif;
+font-size: 22px;
+color: var(--black);
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px;
+transition: var(--transition);
 }
 
 .navbar-link:is(:hover, :focus) {
-  background-color: var(--cultured-1);
-  color: var(--dark-orange);
-  border-radius: 25px; /* Creates an oval effect */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(22, 114, 110, 0.19); /* Adds a subtle glow/shadow */
-  transform: scale(1.05); /* Slightly enlarges the link for emphasis */
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+background-color: var(--cultured-1);
+color: var(--dark-orange);
+border-radius: 25px; /* Creates an oval effect */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(22, 114, 110, 0.19); /* Adds a subtle glow/shadow */
+transform: scale(1.05); /* Slightly enlarges the link for emphasis */
+transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 
 .overlay {
-  position: fixed;
-  inset: 0;
-  background-color: var(--black_60);
-  z-index: 2;
-  visibility: hidden;
-  opacity: 0;
-  transition: var(--transition);
+position: fixed;
+inset: 0;
+background-color: var(--black_60);
+z-index: 2;
+visibility: hidden;
+opacity: 0;
+transition: var(--transition);
 }
 
 .overlay.active {
-  visibility: visible;
-  opacity: 1;
+visibility: visible;
+opacity: 1;
 }
 
 
 /*-----------------------------------*\
-  #HERO
+#HERO
 \*-----------------------------------*/
 .hero {
-  position: relative;
-  height: 815px;
-  display: flex; /* Flexbox to create the two-column layout */
-  justify-content: flex-start; /* Align text to the left */
-  align-items: center; /* Center content vertically */
-  z-index: 1;
-  overflow: hidden;
-  background-color: black; /* Set the background of the whole hero section to black */
+position: relative;
+height: 815px;
+display: flex; /* Flexbox to create the two-column layout */
+justify-content: flex-start; /* Align text to the left */
+align-items: center; /* Center content vertically */
+z-index: 1;
+overflow: hidden;
+background-color: black; /* Set the background of the whole hero se
+ction to black */
 }
+
 
 .hero-content {
   color: var(--white); /* Make text color white to stand out on black background */
-  text-align: left;
+  text-align: left; /* Keep text left-aligned */
   padding: 50px; /* Add padding around the content */
   max-width: 500px; /* Limit width of the content */
   z-index: 2;
   position: relative; /* Keep this relative to position circle shapes correctly */
+  margin-left: -150px; /* Shift the content to the left */
 }
 
 .hero-title .span {
-  color: var(--dark-orange);
-  font-size: 60px;
-  font-weight: var(--fw-700);
+color: var(--dark-orange);
+font-size: 60px;
+font-weight: var(--fw-700);
 }
 
 .hero-text {
-  margin-block: 10px 100px;
-  font-size: 1.2rem;
+margin-block: 10px 100px;
+font-size: 1.2rem;
 }
 
 
 .btn-outline {
-  max-width: max-content;
-  margin-inline: auto;
-  font-size: var(--fs-8);
-  font-weight: var(--fw-500);
-  text-transform: uppercase;
-  border: 1px solid var(--white);
-  padding: 6px 16px;
-  transition: var(--transition);
+max-width: max-content;
+margin-inline: auto;
+font-size: var(--fs-8);
+font-weight: var(--fw-500);
+text-transform: uppercase;
+border: 1px solid var(--white);
+padding: 6px 16px;
+transition: var(--transition);
 }
 
 .btn-outline:is(:hover, :focus) {
-  background-color: var(--dark-orange);
-  border-color: var(--dark-orange);
+background-color: var(--dark-orange);
+border-color: var(--dark-orange);
 }
 
 
 .hero-bg {
-  position: absolute;
-  top: 0;
-  right: 0;  /* Position images on the right side */
-  width: 60%; /* Make the images occupy 60% of the screen */
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -2; /* Keep the images behind the text */
-  animation: carousel 20s infinite;  /* Same as the hero animation */
+position: absolute;
+top: 0;
+right: 0;  /* Position images on the right side */
+width: 60%; /* Make the images occupy 60% of the screen */
+height: 100%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+z-index: -2; /* Keep the images behind the text */
+animation: carousel 20s infinite;  /* Same as the hero animation */
 }
 
 @keyframes carousel {
-  0% {
-    background-image: url('images/hero-banner.jpg');
-  }
-  30% {
-    background-image: url('images/air.jpg');
-  }
-  50% {
-    background-image: url('images/ocean.jpg');
-  }
-  67% {
-    background-image: url('images/train2.jpg');
-  }
-  85% {
-    background-image: url('images/truck2.jpg');
-  }
-  100% {
-    background-image: url('images/hero-banner.jpg');
-  }
+0% {
+  background-image: url('images/hero-banner.jpg');
+}
+30% {
+  background-image: url('images/air.jpg');
+}
+50% {
+  background-image: url('images/ocean.jpg');
+}
+67% {
+  background-image: url('images/train2.jpg');
+}
+85% {
+  background-image: url('images/truck2.jpg');
+}
+100% {
+  background-image: url('images/hero-banner.jpg');
+}
 }
 
 
+/* RESPONSIVE CSS */
+
+@media (max-width: 1200px) {
+.hero-content {
+  margin-left: -30px; /* Slightly reduce the margin shift on smaller screens */
+}
+}
+
+@media (max-width: 992px) {
+.hero-content {
+  margin-left: 0; /* No margin shift on medium and smaller screens */
+  padding: 20px; /* Adjust padding for smaller screens */
+}
+}
+
+@media (max-width: 768px) {
+.hero-content {
+  margin-left: 0; /* Ensure no margin shift on small screens */
+  max-width: 90%; /* Adjust content width for small screens */
+}
+}
+
+@media (max-width: 480px) {
+.hero-content {
+  margin-left: 0; /* No margin shift for mobile */
+  max-width: 100%; /* Take up full width on mobile */
+  padding: 15px; /* Adjust padding for mobile */
+}
+}
+
+@media (max-width: 1200px) {
+.header .container {
+  gap: 20px;
+}
+
+.hero {
+  height: 600px; /* Adjust hero height for smaller screens */
+}
+
+.hero-content {
+  padding: 30px;
+  max-width: 450px; /* Reduce max width for content */
+}
+
+.hero-title .span {
+  font-size: 50px;
+}
+
 .hero-text {
-  margin-left: -150px; /* Move left */
-  margin-top: 200px; /* Move down */
+  font-size: 1rem; /* Reduce font size for text */
+  margin-block: 10px 50px;
 }
 
 .btn-outline {
-  margin-left: -200px; /* Move left */
-  margin-top: 100px; /* Move down */
+  font-size: 16px; /* Adjust font size of button */
+  padding: 10px 20px;
 }
 
-.hero-content h2 {
-  position: absolute;
-  left: -150px; /* Move left */
-  top: -220px;  /* Move down */
+.hero-bg {
+  width: 55%; /* Reduce the width of hero image */
 }
+}
+
+@media (max-width: 992px) {
+.header .container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero {
+  height: 500px; /* Further adjust hero height */
+  flex-direction: column; /* Stack the content */
+  text-align: center;
+}
+
+.hero-content {
+  padding: 20px;
+  max-width: 90%; /* Take up more space on smaller screens */
+}
+
+.hero-title .span {
+  font-size: 40px;
+}
+
+.hero-text {
+  font-size: 0.9rem;
+  margin-block: 10px 30px;
+}
+
+.btn-outline {
+  font-size: 14px; /* Smaller font size for buttons */
+  padding: 8px 18px;
+}
+
+.hero-bg {
+  width: 60%; /* Adjust width of image */
+}
+}
+
+@media (max-width: 768px) {
+.header .container {
+  gap: 10px;
+}
+
+.hero {
+  height: 450px;
+}
+
+.hero-content {
+  padding: 15px;
+  max-width: 100%;
+}
+
+.hero-title .span {
+  font-size: 35px;
+}
+
+.hero-text {
+  font-size: 0.8rem;
+  margin-block: 10px 20px;
+}
+
+.btn-outline {
+  font-size: 12px;
+  padding: 6px 12px;
+}
+
+.hero-bg {
+  width: 70%;
+}
+}
+
+@media (max-width: 480px) {
+.hero {
+  height: 400px; /* Adjust hero height */
+}
+
+.hero-content {
+  padding: 10px;
+  max-width: 100%;
+}
+
+.hero-title .span {
+  font-size: 30px;
+}
+
+.hero-text {
+  font-size: 0.8rem;
+  margin-block: 10px 10px;
+}
+
+.btn-outline {
+  font-size: 10px;
+  padding: 5px 10px;
+}
+
+.hero-bg {
+  width: 80%; /* Image takes up most of the space */
+}
+}
+
 
 
 

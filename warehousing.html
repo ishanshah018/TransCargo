@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehousing Services - Transargho Logistics</title>
+    <link rel="stylesheet" href="warehousing.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Flexible & Secure Storage Solutions for Your Business</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Warehousing Types -->
+        <section class="warehouse-types">
+            <h2>Our Warehousing Services</h2>
+            <div class="types-grid">
+                <div class="type-card" data-tooltip="Perfect for general merchandise and non-perishable goods">
+                    <h3>General Warehousing</h3>
+                    <p>For all goods</p>
+                    <div class="availability available">Available</div>
+                </div>
+                <div class="type-card" data-tooltip="Temperature-controlled storage for perishable items">
+                    <h3>Cold Storage</h3>
+                    <p>For perishable items</p>
+                    <div class="availability available">Available</div>
+                </div>
+                <div class="type-card" data-tooltip="Secure storage for import/export goods with customs facilities">
+                    <h3>Bonded Warehousing</h3>
+                    <p>For import/export goods</p>
+                    <div class="availability available">Available</div>
+                </div>
+                <div class="type-card" data-tooltip="Optimized for e-commerce fulfillment and retail distribution">
+                    <h3>Distribution Centers</h3>
+                    <p>For e-commerce & retail</p>
+                    <div class="availability available">Available</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing">
+            <h2>Pricing & Charges</h2>
+            <div class="pricing-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Storage Type</th>
+                            <th>Small (10x10 ft)</th>
+                            <th>Medium (20x20 ft)</th>
+                            <th>Large (40x40 ft)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="stripe">
+                            <td>General Storage</td>
+                            <td>₹5,000/month</td>
+                            <td>₹9,000/month</td>
+                            <td>₹15,000/month</td>
+                        </tr>
+                        <tr>
+                            <td>Cold Storage</td>
+                            <td>₹7,000/month</td>
+                            <td>₹12,000/month</td>
+                            <td>₹20,000/month</td>
+                        </tr>
+                        <tr class="stripe">
+                            <td>Bonded Warehouse</td>
+                            <td>₹6,000/month</td>
+                            <td>₹11,000/month</td>
+                            <td>₹18,000/month</td>
+                        </tr>
+                        <tr>
+                            <td>Distribution Center</td>
+                            <td>₹8,000/month</td>
+                            <td>₹14,000/month</td>
+                            <td>₹22,000/month</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="additional-charges">
+                <h3>Additional Services</h3>
+                <ul>
+                    <li>24/7 CCTV Security - ₹2,000/month</li>
+                    <li>Climate Control - ₹3,500/month</li>
+                    <li>Bulk Handling & Packaging - ₹5,000 one-time</li>
+                    <li>Insurance Coverage - ₹1,500/month</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Booking Form -->
+        <section class="booking-form" id="booking-section">
+            <h2>Book Your Storage Space</h2>
+            <form id="storageForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" required>
+                        <span class="error" id="emailError" style="display: none;">Invalid email address</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone *</label>
+                        <input type="tel" id="phone" required>
+                        <span class="error" id="phoneError" style="display: none;">Invalid phone number (10 digits, starts with 7/8/9)</span>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label for="business">Business Name (Optional)</label>
+                    <input type="text" id="business">
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Select Date *</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="storageType">Storage Type *</label>
+                        <select id="storageType" required onchange="updatePrice()">
+                            <option value="">Select Type</option>
+                            <option value="general">General Warehousing</option>
+                            <option value="cold">Cold Storage</option>
+                            <option value="bonded">Bonded Warehousing</option>
+                            <option value="distribution">Distribution Center</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="storageSize">Storage Size *</label>
+                        <select id="storageSize" required onchange="updatePrice()">
+                            <option value="">Select Size</option>
+                            <option value="small">Small (10x10 ft)</option>
+                            <option value="medium">Medium (20x20 ft)</option>
+                            <option value="large">Large (40x40 ft)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="duration">Duration *</label>
+                        <select id="duration" required onchange="updatePrice()">
+                            <option value="1">1 Month</option>
+                            <option value="3">3 Months</option>
+                            <option value="6">6 Months</option>
+                            <option value="12">1 Year</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Additional Services</label>
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" id="security" onchange="updatePrice()"> 24/7 CCTV Security (₹2,000/month)
+                        </label>
+                        <label>
+                            <input type="checkbox" id="climate" onchange="updatePrice()"> Climate Control (₹3,500/month)
+                        </label>
+                        <label>
+                            <input type="checkbox" id="handling" onchange="updatePrice()"> Bulk Handling & Packaging (₹5,000 one-time)
+                        </label>
+                        <label>
+                            <input type="checkbox" id="insurance" onchange="updatePrice()"> Insurance Coverage (₹1,500/month)
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="requirements">Special Requirements</label>
+                    <textarea id="requirements" rows="4"></textarea>
+                </div>
+                <div class="price-summary" id="priceSummary">
+                    <h3>Price Summary</h3>
+                    <div id="priceBreakdown"></div>
+                    <div class="total-price">
+                        Total: <span id="totalPrice">₹0</span>
+                    </div>
+                </div>
+                <button type="button" onclick="showPaymentOptions()" class="btn" id="paymentBtn">Proceed to Payment</button>
+            </form>
+        </section>
+
+        <!-- Payment Modal -->
+        <div id="paymentModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Enter Payment Details</h2>
+                <div>
+                    <label for="paymentMethod">Select Payment Method</label>
+                    <select name="paymentMethod" id="paymentMethod">
+                        <option value="select">--Select Payment Method--</option>
+                        <option value="credit">Credit Card</option>
+                        <option value="debit">Debit Card</option>
+                    </select>
+                </div>
+                <div id="cardDetails" style="display: none;">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter card number">
+                    <label for="expiryDate">Expiry Date</label>
+                    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY">
+                </div>
+                <div class="payment-options">
+                    <button onclick="processPayment('card')" class="payment-btn">Pay Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Modal -->
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Payment Successful!</h2>
+                <p>We will reach you shortly on your Mobile Number Provided</p>
+            </div>
+        </div>
+
+        <!-- Success Modal -->
+        <div id="successModal" class="modal">
+            <div class="modal-content success">
+                <span class="close">&times;</span>
+                <div class="success-icon">✓</div>
+                <h2>Booking Successful!</h2>
+                <p>Your warehouse space has been booked successfully.</p>
+                <p>A confirmation email will be sent to your registered email address.</p>
+                <button onclick="closeSuccessModal()" class="btn">Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="warehousing.js"></script>
+</body>
+</html>

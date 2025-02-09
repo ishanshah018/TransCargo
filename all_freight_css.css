@@ -19,6 +19,7 @@ body {
     padding: 0;
     background: var(--gray-100);
     color: var(--text-color);
+    background-color: rgba(56, 122, 154, 0.794);
 }
 
 /* Booking Form Styles */
