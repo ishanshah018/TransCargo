@@ -218,7 +218,6 @@ airFreightForm.addEventListener('submit', function(e) {
     
     const summaryContent = document.getElementById('summaryContent');
     summaryContent.innerHTML = `
-        <p><strong>Freight Type:</strong> ${bookingData.freightType}</p>
         <p><strong>Shipment Type:</strong> ${bookingData.shipmentType}</p>
         <p><strong>Pickup Date:</strong> ${new Date(bookingData.pickupDate).toLocaleDateString()}</p>
         <p><strong>Estimated Delivery:</strong> ${document.querySelector('.delivery-time').textContent}</p>
