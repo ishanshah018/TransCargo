@@ -182,15 +182,11 @@ document.getElementById('destination').addEventListener('change', validateLocati
 // Payment method handling
 document.querySelector('select[name="paymentMethod"]').addEventListener('change', function(e) {
     const cardDetails = document.getElementById('cardDetails');
-    const bankDetails = document.getElementById('bankDetails');
-    
+
     cardDetails.style.display = 'none';
-    bankDetails.style.display = 'none';
     
     if (e.target.value === 'credit' || e.target.value === 'debit') {
         cardDetails.style.display = 'block';
-    } else if (e.target.value === 'bank') {
-        bankDetails.style.display = 'block';
     }
 });
 

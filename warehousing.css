@@ -138,7 +138,7 @@ th, td {
 }
 
 th {
-    background-color: #5cb85c;
+    background-color: hsl(202, 75%, 47%);
     color: white;
     text-transform: uppercase;
 }
