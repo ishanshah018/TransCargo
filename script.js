@@ -39,6 +39,7 @@ mobileLinks.forEach(link => {
     });
 });
 
+
 document.getElementById("learnMoreBtn").addEventListener("click", function () {
   document.getElementById("moreInfoCard").style.display = "block";
 });
