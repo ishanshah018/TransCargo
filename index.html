@@ -26,7 +26,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
     rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
   <!-- 
     - preload images
   -->
@@ -38,83 +39,47 @@
     - #HEADER
   -->
 
-  <header class="header" data-header>
-    <div class="container">
-
-    <a href="#" class="logo-link">  
-      <div class="logo-container">
-        <span class="logo-text">
-          <span class="blue-text">Trans</span><span class="white-text">cargo</span>
-        </span>
-        <div class="logo-icon">
-          <ion-icon name="globe-outline"></ion-icon>
-          <ion-icon name="location-outline" class="location-marker"></ion-icon>
+  <nav class="navbar">
+    <div class="nav-content">
+        <div class="logo">
+            <i class="fas fa-globe"></i>
+            <span>LogiXpress</span>
         </div>
-      </div>
-    </a>
-
-      <nav class="navbar" data-navbar>
-
         
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <a href="#home" class="navbar-link" data-nav-link>
-              <span>Home</span>
-            </a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#about" class="navbar-link" data-nav-link>
-              <span>About</span>
-            </a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#service" class="navbar-link" data-nav-link>
-              <span>Service</span>
-            </a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#blog" class="navbar-link" data-nav-link>
-              <span>Blog</span>
-            </a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#contact" class="navbar-link" data-nav-link>
-              <span>Contact</span>
-            </a>
-          </li>
-
-        </ul>
-
-      </nav>
-
-      <div class="header-contact">
-
-        <div>
-          <p class="contact-label">Free Call In INDIA</p>
-
-          <a href="tel:9988998800" class="contact-number">+91 9988998899</a>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#service">Service</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
         </div>
 
-        <div class="contact-icon">
+        <div class="contact-info">
+            <i class="fas fa-phone"></i>
+            <a href="tel:+91 9909098989">+91 9909098989</a>
         </div>
 
-      </div>
-
-      <button class="nav-open-btn" aria-label="Open menu" data-nav-toggler>
-      </button>
-
-      <div class="overlay" data-nav-toggler data-overlay></div>
-
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
-  </header>
+</nav>
 
+<div class="mobile-menu">
+    <a href="#" class="active">Home</a>
+    <a href="#">About</a>
+    <a href="#">Service</a>
+    <a href="#">Blog</a>
+    <a href="#">Contact</a>
+    <div class="mobile-contact">
+        <i class="fas fa-phone"></i>
+        <a href="tel:+91 9909098989">+91 9909098989</a>
+    </div>
+</div>
 
-
+<div id="app"></div>
 
 
   <main>
@@ -543,12 +508,10 @@
     <div class="container">
       <div class="footer-top section">
         <div class="footer-brand">
-          <div class="logo-container">
-            <span id="logot2">
-              <span class="blue-text">Trans</span><span class="white-text">cargo</span>
-            </span>
-            
-          </div>
+          <div class="logo">
+            <i class="fas fa-globe"></i>
+            <span>LogiXpress</span>
+        </div>
           <p class="footer-text">
             Our Social Media Handles :
           </p>

@@ -1,9 +1,9 @@
 // Base rates for price calculation
 const baseRates = {
-    standard: 10,
-    express: 20,
-    hazardous: 16,
-    valuable: 14
+    standard: 800,
+    express: 1600,
+    hazardous: 900,
+    valuable: 1200
 };
 
 // Sample locations data - these are our service available locations
@@ -93,7 +93,7 @@ function calculatePrice() {
     const height = parseFloat(document.querySelector('input[name="height"]').value) || 0;
     const shipmentType = document.querySelector('select[name="shipmentType"]').value;
     
-    const volume = length * width * height / 5000; // Volume weight calculation
+    const volume = (length * width * height) / 5000; // Volume weight calculation
     const chargeableWeight = Math.max(weight, volume);
     
     let baseRate = baseRates[shipmentType] || baseRates.general;
@@ -106,9 +106,10 @@ function calculatePrice() {
         price *= 1.5;
     }
     
-    // Update price display
-    document.querySelector('.price-amount').textContent = `$${price.toFixed(2)}`;
+    // Update price display in INR
+    document.querySelector('.price-amount').textContent = `₹${price.toFixed(2)}`;
 }
+
 
 // Calculate estimated delivery time based on origin, destination, and shipment type
 function calculateEstimatedDelivery() {
@@ -273,7 +274,7 @@ summaryModal.querySelector('.btn-confirm').addEventListener('click', () => {
 successModal.querySelector('.btn-confirm').addEventListener('click', () => {
     hideModal(successModal);
     airFreightForm.reset();
-    document.querySelector('.price-amount').textContent = '$0.00';
+    document.querySelector('.price-amount').textContent = '₹0.00'; 
     document.querySelector('.delivery-time').textContent = 'Calculate based on your inputs';
 });
 
