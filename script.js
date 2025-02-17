@@ -2,6 +2,24 @@
 
 
 
+// BACK to Top Button
+
+const header = document.querySelector("[data-header]");
+const backTopBtn = document.querySelector("[data-back-top-btn]");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= 100) {
+    if (header) header.classList.add("active");
+    if (backTopBtn) backTopBtn.classList.add("active");
+  } else {
+    if (header) header.classList.remove("active");
+    if (backTopBtn) backTopBtn.classList.remove("active");
+  }
+});
+
+
+
+
 // Navbar functionality
 const navbar = document.querySelector('.navbar');
 const hamburger = document.querySelector('.hamburger');
@@ -50,38 +68,4 @@ document.getElementById("closeBtn").addEventListener("click", function () {
 
 document.getElementById("closeCard").addEventListener("click", function () {
   document.getElementById("moreInfoCard").style.display = "none";
-});
-
-// Blog
-
-// Ensure b1 is hidden initially
-document.getElementById("b1").style.display = "none";
-
-// Event listener for the first blog's "Read More" button
-document.getElementById("blog1").addEventListener("click", function () {
-  document.getElementById("b1").style.display = "block";
-});
-
-// Event listener for the second blog's "Read More" button (if you want to show the same content)
-document.getElementById("blog2").addEventListener("click", function () {
-  document.getElementById("b1").style.display = "block";
-});
-
-// Close button to hide the info card
-document.getElementById("closeBtn").addEventListener("click", function () {
-  document.getElementById("b1").style.display = "none";
-});
-
-// -------
-
-document.getElementById("blog2").addEventListener("click", function () {
-  document.getElementById("b2").style.display = "block";
-});
-
-document.getElementById("closeBtn").addEventListener("click", function () {
-  document.getElementById("b2").style.display = "none";
-});
-
-document.getElementById("closeCard").addEventListener("click", function () {
-  document.getElementById("b2").style.display = "none";
 });
