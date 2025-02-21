@@ -21,6 +21,7 @@ const locations = [
 ];
 
 // Initialize date inputs with minimum dates
+
 function initializeDates() {
     const today = new Date();
     const tomorrow = new Date(today);
@@ -28,6 +29,11 @@ function initializeDates() {
     
     const pickupDate = document.querySelector('input[name="pickupDate"]');
     pickupDate.min = tomorrow.toISOString().split('T')[0];
+    // Converts tomorrow into an ISO 8601 formatted string (YYYY-MM-DDTHH:MM:SSZ).
+    //split('T')[0] removes the time part, leaving only YYYY-MM-DD (e.g., "2025-02-22").
+
+    // Any earlier date will be grayed out (unclickable).
+	// This ensures the user must select at least tomorrow or later.
 }
 
 // Form elements
@@ -146,9 +152,6 @@ document.getElementById('origin').addEventListener('change', calculateEstimatedD
 document.getElementById('destination').addEventListener('change', calculateEstimatedDelivery);
 document.querySelector('input[name="pickupDate"]').addEventListener('change', calculateEstimatedDelivery);
 document.querySelector('select[name="shipmentType"]').addEventListener('change', calculateEstimatedDelivery);
-
-// Initialize dates on load
-initializeDates();
 
 // Setup location inputs
 setupLocationInput(originInput, originSuggestions);
