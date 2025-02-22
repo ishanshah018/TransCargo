@@ -22,7 +22,7 @@ window.addEventListener("scroll", function () {
 
 // Navbar functionality
 const navbar = document.querySelector('.navbar');
-const hamburger = document.querySelector('.hamburger');
+const menutoggler = document.querySelector('.menu-toggler');
 const mobileMenu = document.querySelector('.mobile-menu');
 
 // Scroll effect
@@ -35,28 +35,23 @@ window.addEventListener('scroll', () => {
 });
 
 // Mobile menu toggle
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
+menutoggler.addEventListener('click', () => {
+    menutoggler.classList.toggle('active');
     mobileMenu.classList.toggle('active');
 });
 
-// Close mobile menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
-        hamburger.classList.remove('active');
-        mobileMenu.classList.remove('active');
-    }
-});
 
 // Close mobile menu when clicking on a link
 const mobileLinks = mobileMenu.querySelectorAll('a');
 mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
+        menutoggler.classList.remove('active');
         mobileMenu.classList.remove('active');
     });
 });
 
+
+// For Learn more
 
 document.getElementById("learnMoreBtn").addEventListener("click", function () {
   document.getElementById("moreInfoCard").style.display = "block";

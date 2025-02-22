@@ -1,16 +1,4 @@
 /*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
 
@@ -89,7 +77,9 @@
 /*-----------------------------------*\
   #RESET
 \*-----------------------------------*/
-
+/* The reset ensures that all elements start from a clean base.
+  Removes default browser styles.
+	•	Makes all elements consistent across different browsers. */
 *,
 *::before,
 *::after {
@@ -112,8 +102,10 @@ span,
 input,
 button,
 ion-icon { display: block; }
+/* Ensures elements don’t have unexpected inline behavior. */
 
 img { height: auto; }
+/* 	Prevents images from being stretched. */
 
 input,
 button {
@@ -141,20 +133,6 @@ body {
   line-height: 1.7;
   min-height: 200vh;
 }
-
-:focus-visible { outline-offset: 4px; }
-
-::-webkit-scrollbar { width: 12px; }
-
-::-webkit-scrollbar-track { background-color: var(--cultured-2); }
-
-::-webkit-scrollbar-thumb {
-  background-color: hsl(0, 0%, 80%);
-  border: 2px solid var(--cultured-2);
-}
-
-::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }
-
 
 
 
@@ -197,107 +175,6 @@ body {
   height: 100%;
   object-fit: cover;
 }
-
-/* About Section Styling */
-.section-subtitle {
-  color: var(--dark-orange);
-  text-transform: uppercase;
-  font-size: var(--fs-6);
-  font-family: var(--ff-oswald);
-  font-weight: var(--fw-600);
-  letter-spacing: 3px;
-  margin-block-end: 10px;
-}
-
-.section-text { line-height: 1.4; }
-
-.about-text {
-  font-size: var(--fs-8);
-  line-height: 1.6;
-  color: var(--dark-gray);
-}
-
-/* Button Styling */
-.btn {
-  position: relative;
-  color: #ffffff;
-  background: linear-gradient(90deg, #ff6600, #ff914d);
-  font-size: 14px;  /* Adjust font size */
-  letter-spacing: 1px;
-  padding: 8px 20px;  /* Reduce padding */
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  transition: all 0.4s ease-in-out;
-   margin: 25px 0px ; /* Adds top and bottom margin for proper spacing */
-
-}
-
-/* Gradient Hover Effect */
-.btn:hover {
-  background: linear-gradient(90deg, #ff914d, #ffcc00);
-  box-shadow: 0px 4px 10px rgba(255, 140, 0, 0.4);
-  transform: scale(1.03);  /* Subtle hover effect */
-}
-
-/* Read More Info Card */
-.info-card {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: var(--white);
-  width: 500px;
-  padding: 20px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  z-index: 1000;
-  text-align: center;
-}
-
-.card-content {
-  position: relative;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
-  cursor: pointer;
-  color: var(--dark-gray);
-}
-
-.close-btn:hover {
-  color: var(--dark-orange);
-}
-
-
-.grid-list {
-  display: grid;
-  gap: 30px;
-}
-
-.btn-link {
-  color: var(--dark-orange);
-  font-size: var(--fs-7);
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  overflow: hidden;
-}
-
-.btn-link > * {
-  transform: translateX(-22px);
-  transition: var(--transition);
-}
-
-.btn-link:is(:hover, :focus) > * { transform: translateX(0); }
-
-.w-100 { width: 100%; }
-
 
 
 /*-----------------------------------*\
@@ -404,7 +281,7 @@ body {
   font-weight: 600;
 }
 
-.hamburger {
+.menu-toggler {
   display: none;
   flex-direction: column;
   gap: 6px;
@@ -412,7 +289,7 @@ body {
   padding: 10px;
 }
 
-.hamburger span {
+.menu-toggler span {
   display: block;
   width: 25px;
   height: 2px;
@@ -469,19 +346,19 @@ body {
       display: none;
   }
 
-  .hamburger {
+  .menu-toggler {
       display: flex;
   }
 
-  .hamburger.active span:nth-child(1) {
+  .menu-toggler.active span:nth-child(1) {
       transform: rotate(45deg) translate(8px, 6px);
   }
 
-  .hamburger.active span:nth-child(2) {
+  .menu-toggler.active span:nth-child(2) {
       opacity: 0;
   }
 
-  .hamburger.active span:nth-child(3) {
+  .menu-toggler.active span:nth-child(3) {
       transform: rotate(-45deg) translate(7px, -5px);
   }
 }
@@ -735,6 +612,78 @@ animation: carousel 20s infinite;  /* Same as the hero animation */
 .hero-bg {
   width: 80%; /* Image takes up most of the space */
 }
+}
+
+
+
+/* ------------------------- */
+/* About Section Styling */
+/* ------------------------- */
+
+
+.section-subtitle {
+  color: var(--dark-orange);
+  text-transform: uppercase;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-600);
+  letter-spacing: 3px;
+  margin-block-end: 10px;
+}
+
+.section-text { line-height: 1.4; }
+
+.about-text {
+  font-size: var(--fs-8);
+  line-height: 1.6;
+  color: var(--dark-gray);
+}
+
+/* Button Styling */
+.btn {
+  position: relative;
+  color: #ffffff;
+  background: linear-gradient(90deg, #ff6600, #ff914d);
+  font-size: 14px;  /* Adjust font size */
+  letter-spacing: 1px;
+  padding: 8px 20px;  /* Reduce padding */
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+   margin: 25px 0px ; /* Adds top and bottom margin for proper spacing */
+
+}
+
+/* Gradient Hover Effect */
+.btn:hover {
+  background: linear-gradient(90deg, #ff914d, #ffcc00);
+  box-shadow: 0px 4px 10px rgba(255, 140, 0, 0.4);
+  transform: scale(1.03);  /* Subtle hover effect */
+}
+
+/* Read More Info Card */
+.info-card {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--white);
+  width: 500px;
+  padding: 20px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  z-index: 1000;
+  text-align: center;
+}
+
+.card-content {
+  position: relative;
+}
+
+.grid-list {
+  display: grid;
+  gap: 30px;
 }
 
 
