@@ -167,7 +167,7 @@
                     <div class="form-group">
                         <label for="storageType">Storage Type *</label>
                         <select id="storageType" required onchange="updatePrice()">
-                            <option value="">Select Type</option>
+                            <option value=""selected disabled hidden>Select Type</option>
                             <option value="general">General Warehousing</option>
                             <option value="cold">Cold Storage</option>
                             <option value="bonded">Bonded Warehousing</option>
@@ -177,7 +177,7 @@
                     <div class="form-group">
                         <label for="storageSize">Storage Size *</label>
                         <select id="storageSize" required onchange="updatePrice()">
-                            <option value="">Select Size</option>
+                            <option value="" selected disabled hidden>Select Size</option>
                             <option value="small">Small (10x10 ft)</option>
                             <option value="medium">Medium (20x20 ft)</option>
                             <option value="large">Large (40x40 ft)</option>
@@ -188,6 +188,7 @@
                     <div class="form-group">
                         <label for="duration">Duration *</label>
                         <select id="duration" required onchange="updatePrice()">
+                            <option value="" selected disabled hidden>Select Duration</option>
                             <option value="1">1 Month</option>
                             <option value="3">3 Months</option>
                             <option value="6">6 Months</option>
